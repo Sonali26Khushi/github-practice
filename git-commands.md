@@ -38,3 +38,5 @@ git push origin main
 merge conflict
 What is a merge conflict?
 A merge conflict arises when changes in two branches conflict with each other, such as when edits are made to the same line in a file.
+
+Rebase branch
