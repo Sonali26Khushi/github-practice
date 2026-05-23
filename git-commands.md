@@ -40,3 +40,14 @@ What is a merge conflict?
 A merge conflict arises when changes in two branches conflict with each other, such as when edits are made to the same line in a file.
 
 Rebase branch
+What does rebase actually do to your commits?
+Rebase takes the commits from your current branch and replays them on top of the target branch, effectively rewriting their commit history.
+
+How is the history different from a merge?
+A rebase creates a linear history, while a merge can result in a more complex graph due to non-linear merging of branches.
+
+Why should you never rebase commits that have been pushed?
+Rebasing alters commit history, which can confuse collaborators who have already based their work on those commits
+
+When would you use rebase vs merge?
+Rebase is useful for keeping a clean history in a feature branch before merging into the main branch. Merge is ideal for combining integration branches where history should be preserved.
