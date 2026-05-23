@@ -8,9 +8,12 @@ git remote -v
 git add .
 git commit -m "message"
 git push origin main
+<<<<<<< HEAD
 
 git branch
 git branch feature-1
 git switch feature-1
 git checkout -b feature-2
 git switch feature-1
+=======
+>>>>>>> feature-1
