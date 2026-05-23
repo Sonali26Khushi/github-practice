@@ -15,4 +15,26 @@ git switch feature-1
 git checkout -b feature-2
 git switch feature-1
 
-feature3
+Fast Forward Merge
+if main has no changes and other branch feature3 merge to main
+What is a fast-forward merge?
+A fast-forward merge occurs when the branch being merged has no new commits since it diverged from the main branch, allowing Git to simply move the reference pointer forward
+
+git checkout main
+git merge feature-3
+git push
+
+Merge commit 
+if both the branches has changes 
+When does Git create a merge commit instead?
+Git creates a merge commit when both branches have new commits and a conflict needs to be resolved in the merge process.
+
+git checkout main
+git merge feature-2
+git add .
+git commit -m ""
+git push origin main
+
+merge conflict
+What is a merge conflict?
+A merge conflict arises when changes in two branches conflict with each other, such as when edits are made to the same line in a file.
