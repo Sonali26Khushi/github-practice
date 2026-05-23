@@ -51,3 +51,38 @@ Rebasing alters commit history, which can confuse collaborators who have already
 
 When would you use rebase vs merge?
 Rebase is useful for keeping a clean history in a feature branch before merging into the main branch. Merge is ideal for combining integration branches where history should be preserved.
+
+git checkout -b feature-profile
+# Add small changes and multiple commits
+git add .
+git commit -m "Fix typo"
+# Repeat for a few more small commits
+     
+git checkout main
+git merge feature-profile --squash
+git log
+
+
+
+squash commit
+git checkout -b feature-profile
+# Add small changes and multiple commits
+git add .
+git commit -m "Fix typo"
+# Repeat for a few more small commits
+     
+git checkout main
+git merge feature-profile --squash
+git log
+
+
+cherry-picking
+git checkout -b feature-hotfix
+# Make multiple commits
+git add .
+git commit -m "Hotfix feature"
+# Repeat for two more commits
+     
+git checkout main
+git cherry-pick <commit-hash> # Replace with actual hash of the second commit
+git log
